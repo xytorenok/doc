@@ -1,0 +1,60 @@
+body {
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+header{
+  position: sticky;
+  top: 12px;
+  background-color: #fffb;
+  box-shadow: 0 -12px 0 #fffb;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+}
+
+main {
+  display: grid;
+  grid-template:
+    "outer article inner"
+    / 1fr 4fr 1fr;
+}
+
+.outer {
+  grid-area: outer;
+}
+
+aside {
+  grid-area: inner;
+  position: relative;
+}
+
+aside ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: calc(100vh - 75px);
+  overflow: auto;
+  max-width: 80%;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+aside li {
+  width: max-content;
+  max-width: 100%;
+}
+
+aside nav {
+  position: sticky;
+  top: 50px;
+}
+
+article {
+  grid-area: article;
+  padding: 2vw;
+}
